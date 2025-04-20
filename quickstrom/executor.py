@@ -170,6 +170,8 @@ class Check:
                 try:
                     if action.id == "noop":
                         pass
+                    elif action.id == "refresh":
+                        driver.refresh()
                     elif action.id == "click":
                         id = action.args[0]
                         element = WebElement(driver, id)
